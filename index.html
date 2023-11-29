@@ -4,49 +4,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Search App</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #search-input {
+            padding: 10px;
+            width: 100%;
+        }
+
+        #search-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .search-results .result {
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .search-results img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .search-results a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        #show-more-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <h1> Image Search App</h1>
-    <form actions="">
-        <input type="text" id="search-input" placeholder="search for images">
-        <button id="search-button">Search</button>
-    </form>
+    <header>
+        <h1>Image Search App</h1>
+    </header>
 
-    <div class="search-results">
-        <div class=" search-results">
-            <img src="https://images.unsplash.com/photo-1685895007272-ecf9c6bfdcef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80"
-                alt="Mountain under the sky">
-            <a href="https://unsplash.com/photos/14bT7OWqqAY" target="_blank">Mountains under the sky</a>
+    <main>
+        <form>
+            <input type="text" id="search-input" placeholder="Search for images">
+            <button id="search-button">Search</button>
+        </form>
 
+        <div class="search-results">
+            <div class="result">
+                <img src="https://images.unsplash.com/photo-1685895007272-ecf9c6bfdcef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80"
+                    alt="Mountain under the sky">
+                <a href="https://unsplash.com/photos/14bT7OWqqAY" target="_blank">Mountains under the sky</a>
+            </div>
+            <!-- Repeat the above structure for other search results -->
         </div>
-        <div class=" search-results">
-            <img src="https://plus.unsplash.com/premium_photo-1682050733502-f58b7f499490?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8aVVJc25WdGpCMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
-                alt="Mountain under the sky">
-            <a href="https://unsplash.com/photos/14bT7OWqqAY" target="_blank">Mountains under the sky</a>
+        <button id="show-more-button">Show More</button>
+    </main>
 
-        </div>
-        <div class=" search-results">
-            <img src="https://plus.unsplash.com/premium_photo-1682050733502-f58b7f499490?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8aVVJc25WdGpCMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
-                alt="Mountain under the sky">
-            <a href="https://unsplash.com/photos/14bT7OWqqAY" target="_blank">Mountains under the sky</a>
-
-        </div>
-
-
-
-    </div>
-    <button id="show-more-button">show more</button>
-
-
-
-
+    <footer>
+        &copy; 2023 Image Search App. All rights reserved.
+    </footer>
 
     <script src="script.js"></script>
-
-
 </body>
 
 </html>
